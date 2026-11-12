@@ -1,75 +1,103 @@
-# Awesome-Cloud-Testing-Grid-Infrastructure
+# Awesome Cloud Testing Grid Infrastructure [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Cloud Testing Grid Infrastructure Ecosystem
+> A curated list of top SaaS products, cloud device farms, cross-browser grids, and open-source infrastructure projects for scalable automated and manual test execution.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Cloud Device Farms, Browser Grids & Scalable Test Execution Infrastructure*  
-**Last updated: March 2026**
+[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure?style=flat-square)](https://github.com/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Testing Grid Infrastructure**. These platforms provide the underlying compute, device, and browser infrastructure for running automated and manual tests at scale—covering real device farms, browser grids, virtual machines, and bare-metal provisioning that QA teams depend on for cross-browser and mobile validation.
-
-**Examples** include BrowserStack Cloud Infrastructure, AWS Device Farm, Sauce Labs Cloud Grid, LambdaTest (TestMu AI) Grid, Google Firebase Test Lab, Microsoft Azure DevTest Labs, Oracle Cloud Infrastructure, Equinix Metal, DigitalOcean, and IBM Cloud (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted test grids, open-source device farm tooling, and community-driven infrastructure automation—ideal for QA engineers, platform teams, and organizations seeking transparent, vendor-neutral test execution without per-parallel-session cloud billing.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[BrowserStack](https://www.browserstack.com/)** | Cloud testing grid with 3,000+ browsers and 30,000+ real mobile devices. Automate plans priced per parallel session; multi-parallel pricing gated behind sales . | Automate Desktop: $99/parallel/month (annual); Desktop & Mobile: $175/parallel/month (annual) . Third-party estimates: ~$50–$80/month per incremental parallel at volume . | No permanent free tier; free trial available; free for qualifying open-source projects . |
-| **[AWS Device Farm](https://aws.amazon.com/device-farm/)** | Managed real-device testing service for iOS and Android. Pay-per-device-minute or unlimited monthly device slots. Supports Appium, Espresso, XCTest, and remote access sessions . | Pay-as-you-go: $0.17/device-minute; Unlimited: $250/month per device slot (automated or remote access, Android or iOS) . | **1,000 free device minutes** one-time trial (limited time; standard is 250 minutes) . |
-| **[Sauce Labs](https://saucelabs.com/)** | Enterprise cloud testing with Live Testing, Virtual Device Cloud (emulators/simulators), and Real Device Cloud (physical devices). Unlimited automated testing minutes on paid plans . | Live: $39/month (annual, 1 parallel); Virtual Device Cloud: $149/month (annual); Real Device Cloud: $199/month (annual) . | No permanent free tier; free trial via sales; free for qualifying open-source projects . |
-| **[LambdaTest (TestMu AI)](https://www.lambdatest.com/)** | Cloud grid with 10,000+ browser/OS combinations and real devices. Rebranded to TestMu AI in January 2026. Automation plans priced per parallel session; free tier for evaluation . | Live: $15/month (annual); Desktop Automation (all OS): $79/month per parallel; Real Device Automation: $199/month per parallel . | **Free**: 100 lifetime automation minutes on 2 parallel sessions; limited 2-minute live sessions . |
-| **[Google Firebase Test Lab](https://firebase.google.com/docs/test-lab)** | Cloud testing infrastructure for Android and iOS apps on virtual and physical devices. Integrated with Firebase and Google Cloud; Blaze plan billed per device-minute beyond daily free quotas . | Blaze: $5/hour per physical device; $1/hour per virtual device (beyond daily free limits) . | **Spark (free)**: 10 virtual device tests/day + 5 physical device tests/day. Blaze: 60 min/day virtual + 30 min/day physical free before billing . |
-| **[Azure DevTest Labs](https://azure.microsoft.com/en-us/pricing/details/devtest-lab/)** | Infrastructure provisioning service for dev/test environments. Creates VMs from reusable templates with auto-shutdown and cost controls. The lab service itself is free; you pay only for Azure resources consumed . | **Free** lab service; pay for VMs, storage, networking, Key Vault consumed . | No separate free tier for DevTest Labs; Azure free account credits apply to underlying resources . |
-| **[Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/cloud/)** | Enterprise cloud with compute, storage, and networking. **Always Free** tier includes 2 AMD VMs (1/8 OCPU, 1GB RAM each) and 4 Arm Ampere A1 cores + 24GB RAM—usable for self-hosted test infrastructure . | Pay-as-you-go beyond Always Free limits | **Always Free**: 2 AMD VMs + 4 Arm cores/24GB RAM + 200GB block storage + 10GB object storage; **$300 credit** for 30 days . |
-| **[Equinix Metal](https://metal.equinix.com/)** | Bare-metal cloud infrastructure for latency-sensitive and performance-critical workloads. Suitable for self-managed test grids requiring dedicated hardware. | On-demand vCPU pricing from ~$35–$65/vCPU/month depending on region . | No free tier; trial via sales . |
-| **[DigitalOcean](https://www.digitalocean.com/)** | Developer-friendly cloud with Droplets (VMs), Kubernetes, and managed databases. Bundled plans from $4/month; per-second billing with 60-second minimum . | Droplets from $4/month (512MB RAM); Snapshots $0.06/GB/month . | **$200 credit** for 60 days for new users; no permanent free tier . |
-| **[IBM Cloud](https://www.ibm.com/cloud)** | Enterprise cloud with Lite plans for many services. Pay-As-You-Go account includes $200 credit for first 30 days; full catalog access including free tiers . | Pay-as-you-go beyond Lite/Free plan limits | **Lite/Free plans**: various services free indefinitely; **$200 credit** for 30 days . |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Selenium Grid 4](https://github.com/SeleniumHQ/selenium)** | [![Stars](https://img.shields.io/github/stars/SeleniumHQ/selenium?style=social&color=white)](https://github.com/SeleniumHQ/selenium/stargazers) | Reference hub-and-node architecture for distributed WebDriver execution. The foundation for most self-hosted browser grids. Supports distributed tracing and GraphQL status queries. |
-| **[docker-selenium](https://github.com/SeleniumHQ/docker-selenium)** | [![Stars](https://img.shields.io/github/stars/SeleniumHQ/docker-selenium?style=social&color=white)](https://github.com/SeleniumHQ/docker-selenium/stargazers) | Official Docker images for Grid 4 with Chrome, Firefox, and Edge nodes. Ready-to-run hub and node containers for self-hosted test infrastructure. |
-| **[Moon by Aerokube](https://github.com/aerokube/moon)** | [![Stars](https://img.shields.io/github/stars/aerokube/moon?style=social&color=white)](https://github.com/aerokube/moon/stargazers) | Kubernetes-native browser automation supporting Selenium, Playwright, Puppeteer, and Cypress. Free evaluation keys available; paid license for production. |
-| **[WebSummoner](https://github.com/WebSummoner/websummoner)** | [![Stars](https://img.shields.io/github/stars/WebSummoner/websummoner?style=social&color=white)](https://github.com/WebSummoner/websummoner/stargazers) | Maintained Selenoid successor. Go-based, Apache-2.0, Selenoid API compatible; launches browsers in ephemeral Docker containers per session. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[KEDA](https://github.com/kedacore/keda)** | [![Stars](https://img.shields.io/github/stars/kedacore/keda?style=social&color=white)](https://github.com/kedacore/keda/stargazers) | Kubernetes Event-driven Autoscaling. Scales test execution workloads (including to zero) based on queue depth or schedules—reducing idle grid costs. |
-| **[Callisto](https://github.com/wrike/callisto)** | [![Stars](https://img.shields.io/github/stars/wrike/callisto?style=social&color=white)](https://github.com/wrike/callisto/stargazers) | Open-source Kubernetes-native implementation of Selenium Grid. |
-| **[Selenoid4K8s](https://github.com/alcounit/selenoid4k8s)** | [![Stars](https://img.shields.io/github/stars/alcounit/selenoid4k8s?style=social&color=white)](https://github.com/alcounit/selenoid4k8s/stargazers) | Fork of Selenoid enabling on-demand browser sessions in Kubernetes clusters. |
-
-**Frameworks for building custom systems**: Combine **Selenium Grid 4** or **docker-selenium** for standards-compliant WebDriver routing, **Moon** or **Callisto** for Kubernetes-native browser orchestration, **WebSummoner** for Docker-native ephemeral sessions, and **KEDA** for dynamic scaling—creating a fully self-hosted cloud testing grid on commodity infrastructure or bare-metal providers like Equinix Metal.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Cloud testing grids execute arbitrary browser automation and app installations; enforce proper authentication, session isolation, and cleanup to prevent resource abuse or unauthorized device access.
-- Pricing varies dramatically by parallel session count, device type (virtual vs real), and contract terms; SaaS vendors rarely publish multi-parallel rates. Self-hosted open-source grids require infrastructure provisioning, browser image updates, and monitoring.
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Testing Grid Infrastructure**. These solutions provide the underlying compute, device, and browser infrastructure for running automated and manual tests at scale—covering real mobile device farms, distributed browser grids, virtual machines, and containerized orchestration that QA engineers, platform teams, and SDETs rely on for continuous cross-browser and mobile compatibility testing.
 
 ---
 
-**Made for QA engineers, test automation architects, platform teams, and developers building scalable test infrastructure.**  
-Let's make cloud testing grid infrastructure more open, accessible, and cost-transparent.
+## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source Projects](#open-source-projects)
+- [Architecture & Framework Combinations](#architecture--framework-combinations)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global cloud testing market is estimated at approximately **$12.5 billion to $14.0 billion**, projected to grow at a compound annual growth rate (CAGR) of **11% to 13%** to surpass **$35 billion to $45 billion** over the next decade. The sector remains **moderately fragmented**: specialized testing platforms (BrowserStack, Sauce Labs, LambdaTest) dominate high-concurrency cross-browser and real-device testing, hyperscalers (Microsoft Azure, AWS, Google Cloud) provide core compute, dev/test labs, and mobile device pools, while an active open-source ecosystem (Selenium, Playwright, Selenoid, STF, KEDA) enables organizations to avoid vendor lock-in by operating cost-efficient, self-hosted grids on Kubernetes or bare-metal infrastructure.
+
+---
+
+## SaaS & Hosted Platforms
+
+Platforms are sorted in descending order by parent company market capitalization / valuation.
+
+| Product | Company Size (Valuation / Market Cap) | Description | Pricing (Starting) | Free Tier / Trial Limits |
+|:---|:---|:---|:---|:---|
+| **[Azure DevTest Labs](https://azure.microsoft.com/en-us/pricing/details/devtest-lab/)** | ~$3.8T Market Cap (Microsoft) | Infrastructure provisioning service for dev/test environments. Creates VMs from reusable ARM templates with auto-shutdown and cost management policies. | Free management service; pay-as-you-go for VMs, storage, networking (e.g., B1s VM from ~$0.0104/hr or ~$7.59/mo). | Free service layer; uses Azure Free Account with 30-day $200 credit + 12 months access to 55+ services (including B1s VM). |
+| **[Google Firebase Test Lab](https://firebase.google.com/docs/test-lab)** | ~$3.5T Market Cap (Alphabet) | Cloud testing infrastructure for Android and iOS mobile applications across virtual and physical devices, tightly integrated with Google Cloud and CI/CD pipelines. | Spark plan is free; Blaze pay-as-you-go: $5.00/hour per physical device, $1.00/hour per virtual device. | Spark (Free forever): 10 virtual device runs/day + 5 physical device runs/day. Blaze tier includes 60 virtual min/day + 30 physical min/day free. |
+| **[AWS Device Farm](https://aws.amazon.com/device-farm/)** | ~$2.9T Market Cap (Amazon) | Managed real-device cloud service for iOS, Android, and web apps. Supports Appium, Espresso, XCTest, and interactive browser/device sessions. | Pay-as-you-go: $0.17/device-minute; Unlimited device slot: $250/month per slot (for automated tests or remote access). | One-time free trial: 1,000 free device minutes (standard promotional tier). |
+| **[Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/cloud/)** | ~$370B Market Cap (Oracle) | Enterprise public cloud infrastructure supporting custom dev/test environments and self-hosted Selenium/Playwright grid deployments. | Compute VMs from $0.01/hour (AMD) or $0.015/OCPU-hour (Ampere Arm); pay-as-you-go beyond Always Free limits. | Always Free: 2 AMD compute VMs (1/8 OCPU, 1 GB RAM each) + up to 4 Arm Ampere cores with 24 GB RAM + 200 GB block storage; 30-day $300 trial credit. |
+| **[IBM Cloud](https://www.ibm.com/cloud)** | ~$230B Market Cap (IBM) | Enterprise cloud computing platform offering virtual servers, Kubernetes clusters, and OpenShift environments for enterprise test execution. | Compute VMs from ~$0.038/hour (~$27.74/month for 1 vCPU, 2 GB RAM); pay-as-you-go usage. | 40+ Always Free Lite plans (e.g., Cloud Foundry runtimes, object storage); 30-day $200 free credit upon signup. |
+| **[Equinix Metal](https://metal.equinix.com/)** | ~$104B Market Cap (Equinix) | Automated bare-metal server infrastructure for high-throughput, low-latency, and dedicated hardware-isolated test grid execution. | On-demand bare-metal instances from ~$0.50/hour to ~$3.50/hour depending on server configuration and region. | Sales-arranged evaluation POC; no permanent free tier. |
+| **[DigitalOcean](https://www.digitalocean.com/)** | ~$9.5B Market Cap (DigitalOcean) | Developer-friendly cloud platform providing Droplets (VMs), Managed Kubernetes (DOKS), and block storage for self-hosted test grids. | Droplets starting at $4.00/month (512 MB RAM / 1 vCPU / 10 GB SSD / 500 GB transfer); billed per hour with monthly cap. | 60-day $200 trial credit for new accounts; no permanent free compute tier. |
+| **[BrowserStack](https://www.browserstack.com/)** | ~$4.0B Valuation (Private) | Cloud testing grid providing access to 3,000+ desktop browsers and 30,000+ real Android and iOS mobile devices. | Automate Desktop: $99/month (1 parallel session, billed annually); Desktop & Mobile: $175/month (billed annually); Live Manual: $29/month. | Free trial: 30 minutes of Live manual testing (up to 1 min/session), 100 minutes of Automate execution; Percy offers 5,000 free screenshots/month. |
+| **[Sauce Labs](https://saucelabs.com/)** | ~$400M Valuation (Private) | Cloud testing platform with Virtual Device Cloud (emulators/simulators) and Real Device Cloud with unlimited automated testing minutes on paid plans. | Live Testing: $39/month (1 parallel, billed annually); Virtual Device Cloud: $149/month (billed annually); Real Device Cloud: $199/month (billed annually). | 28-day free trial: 60 minutes of live and automated testing across real devices and emulators, with 3 parallel VMs and 50 AI queries. |
+| **[LambdaTest (TestMu AI)](https://www.lambdatest.com/)** | ~$400M Valuation (Private) | AI-powered test execution cloud providing cross-browser and real-device testing across 10,000+ combinations (rebranded to TestMu AI). | Live Testing: $15/month (billed annually); Desktop Automation: $79/month per parallel (billed annually); Real Device Automation: $199/month per parallel. | Free tier (forever): 100 lifetime automation minutes, 2 parallel sessions, 60 minutes/month of responsive tests, and 10 live tests/month (up to 2 min/session). |
+
+---
+
+## Open-Source Projects
+
+Open-source test execution frameworks, browser grids, container runners, and device farm platforms sorted in descending order by GitHub stars.
+
+| Project | Stars | Star Badge | Description |
+|:---|:---:|:---:|:---|
+| **[Playwright](https://github.com/microsoft/playwright)** | 99k+ | [![Stars](https://img.shields.io/github/stars/microsoft/playwright?style=social&color=white)](https://github.com/microsoft/playwright/stargazers) | Modern end-to-end testing library across Chromium, Firefox, and WebKit with native Docker container execution, parallel workers, and tracing capabilities. |
+| **[Selenium](https://github.com/SeleniumHQ/selenium)** | 34k+ | [![Stars](https://img.shields.io/github/stars/SeleniumHQ/selenium?style=social&color=white)](https://github.com/SeleniumHQ/selenium/stargazers) | Industry-standard browser automation framework featuring Selenium Grid 4 for distributed WebDriver routing, GraphQL node inspection, and Docker integration. |
+| **[Appium](https://github.com/appium/appium)** | 22k+ | [![Stars](https://img.shields.io/github/stars/appium/appium?style=social&color=white)](https://github.com/appium/appium/stargazers) | Cross-platform test automation tool for native, hybrid, and mobile web apps on Android and iOS devices, powering self-hosted mobile device farms. |
+| **[OpenSTF](https://github.com/openstf/stf)** | 13k+ | [![Stars](https://img.shields.io/github/stars/openstf/stf?style=social&color=white)](https://github.com/openstf/stf/stargazers) | Smartphone Test Farm: web-based control plane to manage, debug, and automate fleets of physical Android devices directly from your browser. |
+| **[SeleniumBase](https://github.com/seleniumbase/SeleniumBase)** | 13k+ | [![Stars](https://img.shields.io/github/stars/seleniumbase/SeleniumBase?style=social&color=white)](https://github.com/seleniumbase/SeleniumBase/stargazers) | Python framework for web automation and end-to-end testing with built-in grid routing, UC mode, visual testing, and headless execution. |
+| **[KEDA](https://github.com/kedacore/keda)** | 10k+ | [![Stars](https://img.shields.io/github/stars/kedacore/keda?style=social&color=white)](https://github.com/kedacore/keda/stargazers) | Kubernetes Event-driven Autoscaling: dynamic auto-scaler that scales containerized browser pods to zero based on queue depth in Selenium Grid or messaging queues. |
+| **[Testcontainers](https://github.com/testcontainers/testcontainers-java)** | 8.7k+ | [![Stars](https://img.shields.io/github/stars/testcontainers/testcontainers-java?style=social&color=white)](https://github.com/testcontainers/testcontainers-java/stargazers) | Library supporting JUnit tests with lightweight, throwaway instances of Docker containers, including headless Chrome/Firefox browser containers for ephemeral grid testing. |
+| **[docker-selenium](https://github.com/SeleniumHQ/docker-selenium)** | 8.6k+ | [![Stars](https://img.shields.io/github/stars/SeleniumHQ/docker-selenium?style=social&color=white)](https://github.com/SeleniumHQ/docker-selenium/stargazers) | Official Docker images for Selenium Grid 4 with Chrome, Firefox, and Edge nodes for containerized self-hosted test infrastructure. |
+| **[DeviceFarmer STF](https://github.com/DeviceFarmer/stf)** | 4.6k+ | [![Stars](https://img.shields.io/github/stars/DeviceFarmer/stf?style=social&color=white)](https://github.com/DeviceFarmer/stf/stargazers) | Actively maintained community fork of Smartphone Test Farm (STF) supporting contemporary Android releases, ADB remote control, and device pooling. |
+| **[Selenoid](https://github.com/aerokube/selenoid)** | 2.6k+ | [![Stars](https://img.shields.io/github/stars/aerokube/selenoid?style=social&color=white)](https://github.com/aerokube/selenoid/stargazers) | Lightweight Go implementation of Selenium hub that starts each browser session inside an isolated, disposable Docker container. |
+| **[Zalenium](https://github.com/zalando/zalenium)** | 2.3k+ | [![Stars](https://img.shields.io/github/stars/zalando/zalenium?style=social&color=white)](https://github.com/zalando/zalenium/stargazers) | Flexible, disposable Selenium Grid extension running in Docker containers with video recording and live preview capabilities. |
+| **[Appium Test Distribution (ATD)](https://github.com/AppiumTestDistribution/AppiumTestDistribution)** | 1.0k+ | [![Stars](https://img.shields.io/github/stars/AppiumTestDistribution/AppiumTestDistribution?style=social&color=white)](https://github.com/AppiumTestDistribution/AppiumTestDistribution/stargazers) | Open-source test runner that distributes Appium tests in parallel across connected physical Android and iOS devices and emulators. |
+| **[Moon by Aerokube](https://github.com/aerokube/moon)** | 280+ | [![Stars](https://img.shields.io/github/stars/aerokube/moon?style=social&color=white)](https://github.com/aerokube/moon/stargazers) | Kubernetes-native browser automation platform supporting Selenium, Playwright, Puppeteer, and Cypress with dynamic pod scheduling. |
+| **[Callisto](https://github.com/wrike/callisto)** | 110+ | [![Stars](https://img.shields.io/github/stars/wrike/callisto?style=social&color=white)](https://github.com/wrike/callisto/stargazers) | Kubernetes-native Selenium Grid proxy designed for scalable, isolated browser session provisioning in enterprise K8s clusters. |
+| **[Selenoid4K8s](https://github.com/alcounit/selenoid4k8s)** | 8+ | [![Stars](https://img.shields.io/github/stars/alcounit/selenoid4k8s?style=social&color=white)](https://github.com/alcounit/selenoid4k8s/stargazers) | Kubernetes orchestrator integration for Selenoid enabling on-demand browser pod provisioning per test session. |
+| **[WebSummoner](https://github.com/WebSummoner/websummoner)** | 0+ | [![Stars](https://img.shields.io/github/stars/WebSummoner/websummoner?style=social&color=white)](https://github.com/WebSummoner/websummoner/stargazers) | Apache-2.0 Go-based Selenoid-compatible daemon that runs browser sessions in ephemeral Docker containers per test request. |
+
+---
+
+## Architecture & Framework Combinations
+
+Building an enterprise-ready self-hosted test execution cloud can be accomplished by composing best-of-breed open-source tools:
+
+* **Hub & Routing Layer**: Use **Selenium Grid 4** or **Callisto** to handle routing across multi-language client bindings.
+* **Ephemeral Container Execution**: Pair **Selenoid** or **docker-selenium** with **Moon** on Kubernetes for zero-leak session isolation.
+* **Dynamic Autoscaling**: Implement **KEDA** on Kubernetes to scale browser node pods based on WebDriver queue metrics down to zero during idle hours.
+* **Physical Device Farm Control**: Connect physical test racks using **DeviceFarmer STF** or **OpenSTF** combined with **Appium Test Distribution (ATD)** for parallel mobile regression suites.
+
+---
+
+## How to Contribute
+
+1. Fork the repository.
+2. Add or update entries in `README.md` following the tabular format.
+3. Ensure:
+   - For SaaS products: exact company size / valuation, specific starting pricing, and exact free tier/trial limits.
+   - For open-source tools: GitHub repo link, star badge linking to `/stargazers`, and accurate description.
+4. Open a pull request with a descriptive title and rationale.
+
+---
+
+## Disclaimer
+
+- This list is a community-curated collection for educational and informational purposes.
+- Cloud testing grids execute arbitrary web and mobile automation scripts; always implement strict network policies, ephemeral sandbox containers, and token rotation to prevent security vulnerabilities.
+- Pricing, trial periods, and corporate valuations fluctuate over time; verify current terms with respective service providers.
+
+---
+
+**Maintained for QA Engineers, SDETs, DevOps Architects, and Platform Teams.**
