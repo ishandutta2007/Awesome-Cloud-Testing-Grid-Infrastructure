@@ -1,34 +1,51 @@
-# Awesome Cloud Testing Grid Infrastructure [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<div align="center">
 
-> A curated list of top SaaS products, cloud device farms, cross-browser grids, and open-source infrastructure projects for scalable automated and manual test execution.
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Cloud Testing Grid Infrastructure Banner" width="100%" />
+</p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure?style=flat-square)](https://github.com/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
+# 🌐 Awesome Cloud Testing Grid Infrastructure
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Testing Grid Infrastructure**. These solutions provide the underlying compute, device, and browser infrastructure for running automated and manual tests at scale—covering real mobile device farms, distributed browser grids, virtual machines, and containerized orchestration that QA engineers, platform teams, and SDETs rely on for continuous cross-browser and mobile compatibility testing.
+> **A community-curated collection of elite SaaS platforms, cloud device farms, cross-browser grids, and open-source infrastructure projects for scalable automated and manual test execution.**
 
----
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure?style=flat-square" alt="GitHub Stars" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-## Table of Contents
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Hosted Platforms](#saas--hosted-platforms)
-- [Open-Source Projects](#open-source-projects)
-- [Architecture & Framework Combinations](#architecture--framework-combinations)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
----
-
-## Sector Overview & Market Dynamics
-
-The global cloud testing market is estimated at approximately **$12.5 billion to $14.0 billion**, projected to grow at a compound annual growth rate (CAGR) of **11% to 13%** to surpass **$35 billion to $45 billion** over the next decade. The sector remains **moderately fragmented**: specialized testing platforms (BrowserStack, Sauce Labs, LambdaTest) dominate high-concurrency cross-browser and real-device testing, hyperscalers (Microsoft Azure, AWS, Google Cloud) provide core compute, dev/test labs, and mobile device pools, while an active open-source ecosystem (Selenium, Playwright, Selenoid, STF, KEDA) enables organizations to avoid vendor lock-in by operating cost-efficient, self-hosted grids on Kubernetes or bare-metal infrastructure.
+</div>
 
 ---
 
-## SaaS & Hosted Platforms
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Testing Grid Infrastructure** 🚀. These solutions provide the underlying compute, device, and browser infrastructure for running automated and manual tests at scale—covering real mobile device farms 📱, distributed browser grids 🌐, virtual machines 💻, and containerized orchestration ⚡ that QA engineers, platform teams, and SDETs rely on for continuous cross-browser and mobile compatibility testing.
 
-Platforms are sorted in descending order by parent company market capitalization / valuation.
+---
+
+## 📑 Table of Contents
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
+- [🛠️ Open-Source Projects](#️-open-source-projects)
+- [🏗️ Architecture & Framework Combinations](#️-architecture--framework-combinations)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global cloud testing market is estimated at approximately **$12.5 billion to $14.0 billion** 📈, projected to grow at a compound annual growth rate (CAGR) of **11% to 13%** to surpass **$35 billion to $45 billion** over the next decade. The sector remains **moderately fragmented** 🧩: specialized testing platforms (BrowserStack, Sauce Labs, LambdaTest) dominate high-concurrency cross-browser and real-device testing, hyperscalers (Microsoft Azure, AWS, Google Cloud) provide core compute, dev/test labs, and mobile device pools, while an active open-source ecosystem (Selenium, Playwright, Selenoid, STF, KEDA) enables organizations to avoid vendor lock-in by operating cost-efficient, self-hosted grids on Kubernetes or bare-metal infrastructure 💡.
+
+---
+
+## ☁️ SaaS & Hosted Platforms
+
+Platforms are sorted in descending order by parent company market capitalization / valuation 🏢.
 
 | Product | Company Size (Valuation / Market Cap) | Description | Pricing (Starting) | Free Tier / Trial Limits |
 |:---|:---|:---|:---|:---|
@@ -45,9 +62,9 @@ Platforms are sorted in descending order by parent company market capitalization
 
 ---
 
-## Open-Source Projects
+## 🛠️ Open-Source Projects
 
-Open-source test execution frameworks, browser grids, container runners, and device farm platforms sorted in descending order by GitHub stars.
+Open-source test execution frameworks, browser grids, container runners, and device farm platforms sorted in descending order by GitHub stars ⭐.
 
 | Project | Stars | Star Badge | Description |
 |:---|:---:|:---:|:---|
@@ -70,29 +87,49 @@ Open-source test execution frameworks, browser grids, container runners, and dev
 
 ---
 
-## Architecture & Framework Combinations
+## 🏗️ Architecture & Framework Combinations
 
 Building an enterprise-ready self-hosted test execution cloud can be accomplished by composing best-of-breed open-source tools:
 
-* **Hub & Routing Layer**: Use **Selenium Grid 4** or **Callisto** to handle routing across multi-language client bindings.
-* **Ephemeral Container Execution**: Pair **Selenoid** or **docker-selenium** with **Moon** on Kubernetes for zero-leak session isolation.
-* **Dynamic Autoscaling**: Implement **KEDA** on Kubernetes to scale browser node pods based on WebDriver queue metrics down to zero during idle hours.
-* **Physical Device Farm Control**: Connect physical test racks using **DeviceFarmer STF** or **OpenSTF** combined with **Appium Test Distribution (ATD)** for parallel mobile regression suites.
+* 🔀 **Hub & Routing Layer**: Use **Selenium Grid 4** or **Callisto** to handle routing across multi-language client bindings.
+* 📦 **Ephemeral Container Execution**: Pair **Selenoid** or **docker-selenium** with **Moon** on Kubernetes for zero-leak session isolation.
+* ⚡ **Dynamic Autoscaling**: Implement **KEDA** on Kubernetes to scale browser node pods based on WebDriver queue metrics down to zero during idle hours.
+* 📱 **Physical Device Farm Control**: Connect physical test racks using **DeviceFarmer STF** or **OpenSTF** combined with **Appium Test Distribution (ATD)** for parallel mobile regression suites.
 
 ---
 
-## How to Contribute
+## 🤝 How to Contribute
 
-1. Fork the repository.
-2. Add or update entries in `README.md` following the tabular format.
-3. Ensure:
+Contributions are always welcome! 🌟
+
+1. 🍴 Fork the repository.
+2. 📝 Add or update entries in `README.md` following the tabular format.
+3. 🔍 Ensure:
    - For SaaS products: exact company size / valuation, specific starting pricing, and exact free tier/trial limits.
    - For open-source tools: GitHub repo link, star badge linking to `/stargazers`, and accurate description.
-4. Open a pull request with a descriptive title and rationale.
+4. 🚀 Open a pull request with a descriptive title and rationale.
 
 ---
 
-## Disclaimer
+## 💖 Support
+
+Thank you for exploring and using this list! If you find this resource helpful, please consider:
+- ⭐ **Starring** the repository to help others discover it
+- 🍴 **Forking** and contributing your favorite tools and insights
+- 📢 **Sharing** with your QA, DevOps, and Platform engineering peers
+- ☕ **Buying a coffee** to support ongoing maintenance and curation via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ff69b4?style=for-the-badge&logo=github)](https://github.com/sponsors/ishandutta2007)
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Cloud-Testing-Grid-Infrastructure&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
 
 - This list is a community-curated collection for educational and informational purposes.
 - Cloud testing grids execute arbitrary web and mobile automation scripts; always implement strict network policies, ephemeral sandbox containers, and token rotation to prevent security vulnerabilities.
@@ -100,4 +137,6 @@ Building an enterprise-ready self-hosted test execution cloud can be accomplishe
 
 ---
 
-**Maintained for QA Engineers, SDETs, DevOps Architects, and Platform Teams.**
+<div align="center">
+  <sub>Maintained with ❤️ for QA Engineers, SDETs, DevOps Architects, and Platform Teams.</sub>
+</div>
