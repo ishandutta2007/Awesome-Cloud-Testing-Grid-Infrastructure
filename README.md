@@ -1,6 +1,6 @@
 # Awesome-Cloud-Testing-Grid-Infrastructure
 
-# Top Cloud Testing Grid Infrastructure Ecosystem
+## Top Cloud Testing Grid Infrastructure Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Cloud Device Farms, Browser Grids & Scalable Test Execution Infrastructure*  
